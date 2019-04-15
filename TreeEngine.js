@@ -138,7 +138,7 @@ var t = treeEngine
   .addEdge("2 4")
   .addEdge("1 5")
   .render();
-//TEST//
+//Uncomment this section to get tree path, tree colors and edges sum//
 /*
 test(t,1);
 test(t,2);
