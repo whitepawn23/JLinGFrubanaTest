@@ -1,10 +1,10 @@
 /****************************************************************/
 /*************************** Mediana ****************************/
 /****************************************************************/
-Tiempo de desarrollo: 50min
-Archivo: MedianEngine.js
-Librerias usadas: jquery
-Complejidad temporal: O(n) donde n es el número de operaciones a realizar.
+Tiempo de desarrollo: 50min 
+Archivo: MedianEngine.js 
+Librerias usadas: jquery 
+Complejidad temporal: O(n) donde n es el número de operaciones a realizar. 
 
 Explicación del codigo realizado:
 Se ha construido una api en jquery (medianEngine) en la que se expone un metodo llamado "render", el cual recibe una matriz dada por las siguientes validaciones:
