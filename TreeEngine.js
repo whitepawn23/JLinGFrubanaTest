@@ -149,7 +149,7 @@ test(t,5);
 
 function test(engine,root){
 	var path=  engine.getPath(root);
-	var colors = t.getColors(path);
-  var sum = t.getSum(colors);
+	var colors = engine.getColors(path);
+  var sum = engine.getSum(colors);
   console.log("Path " + root + ": " + JSON.stringify(path) + " Colors: " + JSON.stringify(colors) + " Result: " + JSON.stringify(sum));
   }
