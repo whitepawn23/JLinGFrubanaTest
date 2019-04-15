@@ -5,6 +5,8 @@ var treeEngine = (function (){
   var visited = [];
   var output = [];
   var initialSource;
+  var RX_RESULT=[];
+  
   function _getPath(source,target,visited,paths){
   	visited[source]=true;
    	if (source==target) 
@@ -67,7 +69,8 @@ var treeEngine = (function (){
       sum= sum+uniqueColors.length;
     });
     console.log(sum);
-  }
+    return sum;
+  }  
   return {
   	setDimension : function(val){
     	nodesLength = val+1;            
@@ -94,8 +97,7 @@ var treeEngine = (function (){
       nodes[target].push(source);
       return this;
     },
-    render: function(){
-    
+    render: function(){    
 			$.each(nodes,function(i,e){
       	if(nodes[i+1]==undefined)
         	return;
@@ -105,13 +107,30 @@ var treeEngine = (function (){
 						return;
           result.push(_getTree((i+1),(ix+1)));
       	});
+        RX_RESULT = $.merge($.merge([], RX_RESULT), result);  
         var resultColors = _mapColor(result);
         _print(resultColors);        
       });
+      return this;
+    },
+    getPath: function(i){
+      var result = [];
+      jQuery.grep(RX_RESULT, function( n, ix ) {
+      	if (n[0]== i){
+        	result.push(n);
+        }
+      });
+      return result;
+    },
+    getColors: function(m){
+    	return _mapColor(m);
+    },
+    getSum: function(m){
+    	return _print(m);   
     }
   }
 })();
-treeEngine
+var t = treeEngine
 	.setDimension(5)
   .setColors("1 2 3 2 3")
   .addEdge("1 2")
@@ -119,3 +138,18 @@ treeEngine
   .addEdge("2 4")
   .addEdge("1 5")
   .render();
+//TEST//
+/*
+test(t,1);
+test(t,2);
+test(t,3);
+test(t,4);
+test(t,5);
+*/
+
+function test(engine,root){
+	var path=  engine.getPath(root);
+	var colors = t.getColors(path);
+  var sum = t.getSum(colors);
+  console.log("Path " + root + ": " + JSON.stringify(path) + " Colors: " + JSON.stringify(colors) + " Result: " + JSON.stringify(sum));
+  }
