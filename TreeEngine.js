@@ -130,24 +130,124 @@ var treeEngine = (function (){
     }
   }
 })();
-var t = treeEngine
-	.setDimension(5)
-  .setColors("1 2 3 2 3")
-  .addEdge("1 2")
-  .addEdge("2 3")
-  .addEdge("2 4")
-  .addEdge("1 5")
-  .render();
-//Uncomment this section to get tree path, tree colors and edges sum//
-/*
-test(t,1);
-test(t,2);
-test(t,3);
-test(t,4);
-test(t,5);
-*/
 
-function test(engine,root){
+  test1();
+  //test2();
+  //test3();
+  //test4();
+  
+function test1(){
+/*
+        1
+       / \  
+      2   5
+     / \ 
+    3   4 
+*/	 
+	var t = treeEngine	
+	.setDimension(5)
+	.setColors("1 2 3 2 3")
+	.addEdge("1 2")
+	.addEdge("2 3")
+	.addEdge("2 4")
+	.addEdge("1 5")
+	.render();
+  
+	//printTest(t,1);
+}	
+
+function test2(){
+/*
+        1
+       / \  
+      2   3
+     / \   \
+    4   5   6 - 11
+   / \     / \
+  7   8   9  10		
+*/
+	var t = treeEngine	
+	.setDimension(11) 
+	.setColors("1 2 3 2 3 4 5 3 1 1 2")
+	.addEdge("1 2")
+	.addEdge("2 4")
+	.addEdge("2 5")
+	.addEdge("4 7")
+	.addEdge("4 8")
+	.addEdge("1 3")
+	.addEdge("3 6")
+	.addEdge("6 11")
+	.addEdge("6 9")
+	.addEdge("6 10")
+	.render();
+	
+	//printTest(t,1);
+}
+
+function test3(){
+/*
+       4   3 
+        \ /
+     5 - 1 - 2
+        / \
+       6   7 - 8
+      / \
+     9  10
+*/	
+	var t = treeEngine	
+	.setDimension(10)
+	.setColors("1 2 3 2 3 4 5 3 1 1")
+	.addEdge("1 2")
+	.addEdge("1 3")
+	.addEdge("1 4")
+	.addEdge("1 5")
+	.addEdge("1 6")
+	.addEdge("1 7")
+	.addEdge("7 8")
+	.addEdge("6 9")
+	.addEdge("6 10")
+	.render();
+  
+	//printTest(t,1);
+}
+
+function test4(){
+/*
+          1
+         / \  
+        2 - 3
+       / \ / \
+      4 - 5 - 6
+     / \ / \ / \
+    7 - 8 - 9 - 10
+*/	
+	var t = treeEngine	
+	.setDimension(10)
+	.setColors("1 2 3 2 3 4 5 3 1 1")
+	.addEdge("1 2")
+	.addEdge("1 3")
+	.addEdge("2 4")
+	.addEdge("2 5")
+	.addEdge("3 5")
+	.addEdge("3 6")
+	.addEdge("4 7")
+	.addEdge("4 8")
+	.addEdge("5 8")
+	.addEdge("5 9")
+	.addEdge("6 9")
+	.addEdge("6 10")
+	.addEdge("2 3")
+	.addEdge("4 5")
+	.addEdge("5 6")
+	.addEdge("7 8")
+	.addEdge("8 9")
+	.addEdge("9 10")
+	.render();
+  
+	//printTest(t,1);
+}
+
+function printTest(engine,root){
 	var path=  engine.getPath(root);
 	var colors = engine.getColors(path);
   var sum = engine.getSum(colors);
