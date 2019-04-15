@@ -34,7 +34,7 @@ Entendimiento del problema: 20min
 Diseño de la solucion: 3hrs
 Tiempo de desarrollo: 10min
 Total tiempo empleado: 3.5hrs
-Archivo: TreeColors.js
+Archivo: TreeEngine.js
 Librerias usadas: jquery
 Complejidad temporal: O(n) donde n es el número de nodos del árbol.
 
