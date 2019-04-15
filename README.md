@@ -49,13 +49,14 @@ Se ha construido una api en jquery (treeEngine) en la que se expone los siguient
 		condiciones: el primer valor corresponde al nodo orígen, el segundo valor corresponde al nodo destino.
 	render: realiza el calculo de colores diferentes en el arbol.
 	
-Árboles permitidos	 
-             1  
-            / \  
-           2   5  
-		      / \  
-         3   4
+Árboles permitidos	              
 
+             1
+            / \  
+           2   5
+          / \ 
+         3   4 
+       
              1
             / \  
            2 - 3
