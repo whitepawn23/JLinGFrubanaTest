@@ -48,7 +48,10 @@ Se ha construido una api en jquery (treeEngine) en la que se expone los siguient
 		tipo: String delimitado por espacios
 		condiciones: el primer valor corresponde al nodo orígen, el segundo valor corresponde al nodo destino.
 	render: realiza el calculo de colores diferentes en el arbol.
-	
+Acceso a paths:
+Podra recuperar el path, colores y suma de nodos de diferente color desde:
+	getPath, getColors, y getSum.
+Al final del archivo se encuentra como recuperar dichos valores.
 Árboles permitidos	              
 
              1
