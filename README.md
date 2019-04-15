@@ -30,10 +30,10 @@ En la parte inferior del archivo podrá encontrar algunos ejemplos de su uso.
 /****************************************************************/
 /************************ Árbol sin raíz ************************/
 /****************************************************************/
-Entendimiento del problema: 20min
+Entendimiento del problema: 30min
 Diseño de la solucion: 3hrs
-Tiempo de desarrollo: 10min
-Total tiempo empleado: 3.5hrs
+Tiempo de desarrollo: 2hrs
+Total tiempo empleado: 5.5hrs
 Archivo: TreeEngine.js
 Librerias usadas: jquery
 Complejidad temporal: O(n) donde n es el número de nodos del árbol.
